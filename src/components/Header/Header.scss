@@ -1,0 +1,13 @@
+@import "public/styles/index";
+
+header {
+    height: 60px;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: $main-blue;
+    text-align: center;
+    border: 2px solid $border-blue;
+    span {
+        font-size: 20px;
+    }
+}

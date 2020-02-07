@@ -1,0 +1,13 @@
+@import 'public/styles/index';
+
+.bottom-panel {
+  background-color: $main-blue;
+  flex: 1 1 auto;
+  padding: 20px;
+  border: 2px solid $border-blue;
+  .content {
+    background-color: $body-light-blue;
+    height: 100%;
+    border: 2px solid $border-blue;
+  }
+}

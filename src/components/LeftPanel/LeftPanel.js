@@ -1,8 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
+import "./LeftPanel.scss";
 
 const LeftPanel = props => {
-  return <div></div>;
+  return (
+    <div className="left-panel">
+      <div className="content"></div>
+    </div>
+  );
 };
 
 LeftPanel.propTypes = {};

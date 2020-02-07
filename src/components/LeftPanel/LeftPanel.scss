@@ -1,0 +1,14 @@
+@import 'public/styles/index';
+
+.left-panel {
+  background-color: $main-blue;
+  height: 100%;
+  border: 2px solid $border-blue;
+  padding: 5px;
+  box-sizing: border-box;
+  .content {
+    background-color: $body-light-blue;
+    height: 100%;
+    border: 2px solid $border-blue;
+  }
+}
