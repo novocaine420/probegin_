@@ -1,7 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { Resizable } from "re-resizable";
-import { useResize } from "../hooks/useResize";
 
 const ResizableComponent = ({
   children,
@@ -12,7 +11,7 @@ const ResizableComponent = ({
   maxWidth,
   enable
 }) => {
-  const [height, setHeight] = useResize("");
+  const [height, setHeight] = useState("");
 
   return (
     <Resizable
@@ -41,6 +40,14 @@ const ResizableComponent = ({
   );
 };
 
-ResizableComponent.propTypes = {};
+ResizableComponent.propTypes = {
+  children: PropTypes.node.isRequired,
+  className: PropTypes.string.isRequired,
+  size: PropTypes.object.isRequired,
+  minHeight: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  minWidth: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  maxWidth: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  enable: PropTypes.object.isRequired
+};
 
 export default ResizableComponent;
