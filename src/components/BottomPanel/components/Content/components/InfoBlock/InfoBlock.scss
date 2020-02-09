@@ -1,0 +1,27 @@
+@import 'public/styles/index';
+
+.info-block {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+  .label {
+    min-width: 100px;
+    padding: 3px;
+    border: 1px solid $border-blue;
+    background-color: $light-grey;
+    margin-right: 10px;
+    border-radius: 2px;
+    text-align: center;
+  }
+  .text {
+    min-width: 100px;
+    text-align: center;
+    padding: 3px;
+    border: 1px solid $border-blue;
+    background-color: $white;
+    border-radius: 2px;
+    &.long {
+      width: 300px;
+    }
+  }
+}

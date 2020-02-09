@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 
 import Header from "../Header/Header";
 import LeftPanel from "../LeftPanel/LeftPanel";
@@ -10,7 +9,7 @@ import ResizableComponent from "../ResizableComponent/ResizableComponent";
 
 import "./MainBlock.scss";
 
-const MainBlock = props => {
+const MainBlock = () => {
   return (
     <div className="container">
       <Header title="Product" />
@@ -25,7 +24,7 @@ const MainBlock = props => {
             className="resizable-left"
             size={{ width: "", height: "100%" }}
             enable={{ right: true }}
-            minWidth={0}
+            minWidth={25}
             maxWidth={"40%"}
           >
             <LeftPanel />
@@ -46,7 +45,5 @@ const MainBlock = props => {
     </div>
   );
 };
-
-MainBlock.propTypes = {};
 
 export default MainBlock;

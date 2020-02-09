@@ -3,12 +3,16 @@ import PropTypes from "prop-types";
 
 import "./Cell.scss";
 
-const Cell = ({ title }) => {
-  return <span>{title}</span>;
+const Cell = ({ title, onClick }) => {
+  return (
+    <span className="cell" onClick={onClick}>
+      {title}
+    </span>
+  );
 };
 
 Cell.propTypes = {
-  title: PropTypes.string.isRequired
+  title: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
 };
 
 export default Cell;

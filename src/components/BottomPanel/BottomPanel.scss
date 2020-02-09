@@ -3,11 +3,20 @@
 .bottom-panel {
   background-color: $main-blue;
   flex: 1 1 auto;
-  padding: 30px 10px;
   border: 2px solid $border-blue;
+  display: flex;
+  flex-flow: column;
+  .tabs {
+    display: inline-flex;
+    flex-direction: row;
+  }
   .content {
+    margin: 10px 10px 30px;
+    padding: 10px;
+    box-sizing: border-box;
     background-color: $body-light-blue;
     height: 100%;
     border: 2px solid $border-blue;
+    overflow: hidden;
   }
 }

@@ -1,4 +1,4 @@
-@import 'public/styles/index';
+@import "public/styles/index";
 
 .left-panel {
   background-color: $main-blue;
@@ -6,13 +6,18 @@
   border: 1px solid $border-blue;
   padding: 10px;
   box-sizing: border-box;
-  .content {
+  .content-wrapper {
     box-sizing: border-box;
     background-color: $body-light-blue;
     height: 100%;
     border: 2px solid $border-blue;
-    display: flex;
-    flex-direction: column;
-    padding: 10px;
+    overflow: hidden;
+    .content {
+      margin: 10px;
+      .categories {
+        display: flex;
+        flex-direction: column;
+      }
+    }
   }
 }

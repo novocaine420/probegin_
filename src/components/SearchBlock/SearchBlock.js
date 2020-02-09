@@ -1,12 +1,11 @@
-import React, { useState } from "react";
-import PropTypes from "prop-types";
+import React, { useState, useContext } from "react";
 import styled from "styled-components";
 
 import Table from "./components/Table";
 import Input from "./components/Input/Input";
-import { devices } from "../../mockData/devices";
 
 import "./SearchBlock.scss";
+import { ProductsContext } from "../../context/products-context";
 
 const columns = [
   {
@@ -18,8 +17,8 @@ const columns = [
     accessor: "description"
   },
   {
-    Header: "Length",
-    accessor: "length"
+    Header: "Diagonal",
+    accessor: "diagonal"
   },
   {
     Header: "Width",
@@ -64,8 +63,9 @@ const Styles = styled.div`
   }
 `;
 
-const SearchBlock = props => {
+const SearchBlock = () => {
   const [value, setValue] = useState("");
+  const [products] = useContext(ProductsContext);
 
   const onInputChange = e => {
     setValue(e.target.value);
@@ -77,15 +77,13 @@ const SearchBlock = props => {
       <Styles>
         <Table
           columns={columns}
-          data={devices.filter(device =>
-            device.description.toLowerCase().includes(value)
+          data={products.filter(device =>
+            device.description.toLowerCase().includes(value.toLowerCase())
           )}
         />
       </Styles>
     </div>
   );
 };
-
-SearchBlock.propTypes = {};
 
 export default SearchBlock;

@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import PropTypes from "prop-types";
 import { useTable } from "react-table";
 
+import { DeviceContext } from "../../../context/products-context";
+
 const Table = ({ columns, data }) => {
+  const [, setDevice] = useContext(DeviceContext);
   const {
     getTableProps,
     getTableBodyProps,
@@ -30,7 +33,12 @@ const Table = ({ columns, data }) => {
           {rows.map((row, i) => {
             prepareRow(row);
             return (
-              <tr {...row.getRowProps()}>
+              <tr
+                {...row.getRowProps()}
+                onClick={e => {
+                  setDevice(row.values);
+                }}
+              >
                 {row.cells.map(cell => {
                   return (
                     <td {...cell.getCellProps()}>{cell.render("Cell")}</td>
@@ -45,6 +53,9 @@ const Table = ({ columns, data }) => {
   );
 };
 
-Table.propTypes = {};
+Table.propTypes = {
+  columns: PropTypes.arrayOf(PropTypes.object),
+  data: PropTypes.arrayOf(PropTypes.object)
+};
 
 export default Table;
