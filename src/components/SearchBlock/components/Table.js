@@ -49,6 +49,18 @@ const Table = ({ columns, data }) => {
           })}
         </tbody>
       </table>
+      {rows.length === 0 && (
+        <p
+          style={{
+            textAlign: "center",
+            padding: 10,
+            width: "100%",
+            boxSizing: "border-box"
+          }}
+        >
+          there are no such products
+        </p>
+      )}
     </div>
   );
 };

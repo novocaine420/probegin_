@@ -7,9 +7,10 @@
   display: flex;
   flex-flow: column;
   height: 100%;
+  overflow: hidden;
   .resizable-comp {
     height: 45%;
-    max-height: 74%;
+    max-height: calc(100% - 90px);
     .main-block {
       height: 100%;
       display: flex;

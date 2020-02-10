@@ -18,7 +18,7 @@ export const devices = [
     category: "TV",
     company: "Philips",
     resolution: "Full HD",
-    diagonal: 49,
+    diagonal: 50,
     width: 10,
     height: 15,
     weight: 2
@@ -102,7 +102,7 @@ export const devices = [
     category: "tablet",
     company: "Apple",
     resolution: "4K",
-    diagonal: 12.9,
+    diagonal: 12,
     width: 10,
     height: 15,
     weight: 2
@@ -114,7 +114,7 @@ export const devices = [
     category: "tablet",
     company: "Samsung",
     resolution: "Full HD",
-    diagonal: 10.5,
+    diagonal: 12,
     width: 10,
     height: 15,
     weight: 2

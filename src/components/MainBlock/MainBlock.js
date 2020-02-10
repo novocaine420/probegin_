@@ -24,7 +24,7 @@ const MainBlock = () => {
             className="resizable-left"
             size={{ width: "", height: "100%" }}
             enable={{ right: true }}
-            minWidth={25}
+            minWidth={22}
             maxWidth={"40%"}
           >
             <LeftPanel />
@@ -34,7 +34,7 @@ const MainBlock = () => {
             className="resizable-right"
             size={{ width: "", height: "100%" }}
             enable={{ left: true }}
-            minWidth={25}
+            minWidth={22}
             maxWidth={"40%"}
           >
             <RightPanel />

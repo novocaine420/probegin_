@@ -3,11 +3,13 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 
 const Styles = styled.div`
-  padding: 5px;
-  border: 1px solid #6a97c9;
-  display: inline-block;
-  margin-bottom: 20px;
-  cursor: pointer;
+  span {
+    padding: 5px;
+    border: 1px solid #6a97c9;
+    display: inline-block;
+    margin-bottom: 20px;
+    cursor: pointer;
+  }
 `;
 
 const ResetButton = ({ onClick }) => {

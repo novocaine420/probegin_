@@ -10,8 +10,8 @@
     box-sizing: border-box;
     background-color: $body-light-blue;
     height: 100%;
-    border: 2px solid $border-blue;
-    overflow: hidden;
+    border: 1px solid $border-blue;
+    overflow: auto;
     .content {
       margin: 10px;
       .categories {
