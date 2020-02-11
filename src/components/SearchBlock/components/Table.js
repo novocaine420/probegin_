@@ -51,6 +51,7 @@ const Table = ({ columns, data }) => {
       </table>
       {rows.length === 0 && (
         <p
+          className="no-content-message"
           style={{
             textAlign: "center",
             padding: 10,

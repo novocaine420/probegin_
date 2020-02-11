@@ -7,32 +7,7 @@ import Input from "./components/Input/Input";
 import "./SearchBlock.scss";
 import { ProductsContext } from "../../context/products-context";
 
-const columns = [
-  {
-    Header: "Code",
-    accessor: "code"
-  },
-  {
-    Header: "Description",
-    accessor: "description"
-  },
-  {
-    Header: "Diagonal",
-    accessor: "diagonal"
-  },
-  {
-    Header: "Width",
-    accessor: "width"
-  },
-  {
-    Header: "Height",
-    accessor: "height"
-  },
-  {
-    Header: "Weight",
-    accessor: "weight"
-  }
-];
+import { columns } from "../../mockData/tableColumns";
 
 const Styles = styled.div`
   table {

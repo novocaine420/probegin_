@@ -16,7 +16,7 @@ const Styled = styled.div`
 const Dropdown = ({ onChange }) => {
   return (
     <Styled>
-      <select id="filter-type" onChange={onChange}>
+      <select name="dropdown" id="filter-type" onChange={onChange}>
         <option value="company">Show companies</option>
         <option value="diagonal">Show dimensions</option>
         <option value="resolution">Show screen resolutions</option>

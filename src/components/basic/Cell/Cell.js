@@ -12,7 +12,8 @@ const Cell = ({ title, onClick }) => {
 };
 
 Cell.propTypes = {
-  title: PropTypes.oneOfType([PropTypes.string, PropTypes.number])
+  title: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  onClick: PropTypes.func
 };
 
 export default Cell;
